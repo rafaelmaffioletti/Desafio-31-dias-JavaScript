@@ -19,3 +19,18 @@
 4. Use o operador ternário para verificar se uma variável `saldo` é maior que 0 e exiba "Saldo positivo" ou "Saldo negativo".
 5. Escreva um programa que classifique números em "Positivo", "Negativo" ou "Zero".
 6. Crie um sistema de opções para um caixa eletrônico: "1 - Sacar", "2 - Depositar", "3 - Saldo". Use `switch` para processar a escolha.
+
+## Dia 03 - Boleanos
+
+1. Verifique se um número é maior que 10 e menor que 20.
+2. Crie um código que verifique se uma pessoa pode votar. Considere idade >= 16.
+3. Use `&&` e `||` para criar um sistema de login onde um usuário pode entrar com email **ou** nome de usuário, mas precisa fornecer uma senha válida.
+4. Implemente um sistema de notas onde:
+   - Notas >= 90: "Aprovado com A"
+   - Notas >= 70 e < 90: "Aprovado com B"
+   - Notas < 70: "Reprovado".
+5. Crie uma variável `saldo` e verifique:
+   - Se `saldo > 0`: Mostre "Saldo positivo".
+   - Se `saldo === 0`: Mostre "Sem saldo".
+   - Caso contrário, mostre "Saldo negativo".
+6. Use o operador `!` para verificar se uma luz está apagada e ligue-a.
