@@ -939,3 +939,391 @@ console.log("Senha correta! 🎉");
 Parabéns por concluir o quinto dia do desafio! 🎉 Agora você sabe como usar os laços de repetição para automatizar tarefas no código.
 
 Amanhã, vamos aprender sobre **Listas e Arrays**, uma estrutura de dados essencial para trabalhar com coleções de informações. Te vejo lá! 👋
+
+# 06 = Arrays
+
+### **📌 Introdução**
+
+Bem-vindo ao **sexto dia do desafio!** 🎉 Hoje vamos falar sobre **Arrays**, uma das estruturas de dados mais fundamentais na programação.
+
+Imagine que você precisa armazenar vários valores relacionados, como os nomes dos seus amigos ou uma lista de compras. Criar uma variável para cada item seria inviável, certo? É aqui que entram os **arrays**.
+
+Arrays permitem que você armazene vários valores em uma única variável e acesse ou manipule esses valores com facilidade. Vamos mergulhar nesse conceito e aprender como usá-lo no JavaScript! 🚀
+
+---
+
+### **📚 O Que é um Array?**
+
+Um **array** é uma lista ordenada de valores que podem ser de qualquer tipo: números, strings, objetos, ou até outros arrays.
+
+💡 **Exemplo no mundo real:**
+
+- Uma lista de tarefas.
+- Nomes de participantes em um evento.
+
+📌 **Exemplo no código:**
+
+```jsx
+let frutas = ["Maçã", "Banana", "Laranja"];
+console.log(frutas); // Saída: ["Maçã", "Banana", "Laranja"]
+```
+
+---
+
+### **🔍 Como Criar Arrays no JavaScript**
+
+### **1. Arrays Simples:**
+
+```jsx
+let numeros = [1, 2, 3, 4, 5];
+```
+
+### **2. Arrays Mistos (diferentes tipos):**
+
+```jsx
+let misto = [42, "Texto", true, { chave: "valor" }];
+```
+
+### **3. Array Vazio:**
+
+```jsx
+let vazio = [];
+```
+
+📌 **Dica:** Você pode adicionar elementos ao array depois de criá-lo:
+
+```jsx
+vazio.push("Novo Elemento");
+console.log(vazio); // Saída: ["Novo Elemento"]
+```
+
+---
+
+### **🔄 Métodos e Propriedades de Arrays**
+
+Os arrays vêm com vários métodos úteis para facilitar sua manipulação. Aqui estão os mais importantes:
+
+| Método      | Descrição                        | Exemplo                      | Resultado                    |
+| ----------- | -------------------------------- | ---------------------------- | ---------------------------- |
+| `push()`    | Adiciona um elemento ao final    | `frutas.push("Uva")`         | `["Maçã", "Banana", "Uva"]`  |
+| `pop()`     | Remove o último elemento         | `frutas.pop()`               | `["Maçã", "Banana"]`         |
+| `shift()`   | Remove o primeiro elemento       | `frutas.shift()`             | `["Banana", "Laranja"]`      |
+| `unshift()` | Adiciona um elemento no início   | `frutas.unshift("Morango")`  | `["Morango", "Maçã"]`        |
+| `length`    | Retorna o tamanho do array       | `frutas.length`              | `3`                          |
+| `indexOf()` | Retorna o índice de um valor     | `frutas.indexOf("Banana")`   | `1`                          |
+| `slice()`   | Retorna parte do array           | `frutas.slice(1, 3)`         | `["Banana", "Laranja"]`      |
+| `splice()`  | Adiciona/Remove elementos        | `frutas.splice(1, 1, "Uva")` | `["Maçã", "Uva", "Laranja"]` |
+| `join()`    | Junta os elementos em uma string | `frutas.join(", ")`          | `"Maçã, Banana, Laranja"`    |
+
+---
+
+### **💻 Exemplos Práticos**
+
+**Adicionar e Remover Elementos:**
+
+```jsx
+let lista = ["Caderno", "Caneta", "Borracha"];
+lista.push("Lápis"); // Adiciona no final
+lista.shift(); // Remove o primeiro elemento
+console.log(lista); // Saída: ["Caneta", "Borracha", "Lápis"]
+```
+
+**Iterar Sobre um Array:**
+
+```jsx
+let numeros = [1, 2, 3, 4, 5];
+for (let i = 0; i < numeros.length; i++) {
+  console.log(numeros[i]);
+}
+// Saída:
+// 1
+// 2
+// 3
+// 4
+// 5
+```
+
+**Encontrar um Elemento:**
+
+```jsx
+let frutas = ["Maçã", "Banana", "Laranja"];
+let indice = frutas.indexOf("Banana");
+console.log(indice); // Saída: 1
+```
+
+**Copiar Parte de um Array:**
+
+```jsx
+let numeros = [10, 20, 30, 40, 50];
+let subArray = numeros.slice(1, 4);
+console.log(subArray); // Saída: [20, 30, 40]
+```
+
+**Manipular Arrays com `splice`:**
+
+```jsx
+let lista = ["A", "B", "C"];
+lista.splice(1, 1, "X", "Y");
+console.log(lista); // Saída: ["A", "X", "Y", "C"]
+```
+
+---
+
+### **🛠️ Dicas Importantes**
+
+- **Acessar o Último Elemento:**
+  Use `array[array.length - 1]` para acessar o último elemento de um array.
+
+```jsx
+let numeros = [5, 10, 15];
+console.log(numeros[numeros.length - 1]); // Saída: 15
+```
+
+- **Cuidado com Índices Inválidos:**
+  Acessar um índice que não existe retorna `undefined`:
+
+```jsx
+let frutas = ["Maçã", "Banana"];
+console.log(frutas[5]); // Saída: undefined
+```
+
+---
+
+### **🎯 Exercícios Práticos**
+
+1. Crie um array com suas três cores favoritas e adicione uma nova cor no final.
+2. Use um loop para exibir todos os itens de um array de compras.
+3. Dado um array de números `[10, 20, 30, 40, 50]`, use o método `slice` para extrair os dois últimos números.
+4. Crie um array de tarefas e remova a primeira tarefa usando `shift`.
+5. Use `splice` para substituir o terceiro item de um array por "Substituído".
+6. Transforme um array de palavras em uma frase completa usando `join`.
+
+---
+
+### **🚀 Conclusão**
+
+Parabéns por concluir o sexto dia do desafio! 🎉 Agora você já sabe como criar, manipular e utilizar arrays no JavaScript.
+
+Amanhã, vamos falar sobre **Funções**, um conceito que vai ajudar você a organizar melhor o seu código. Te vejo lá! 👋
+
+# 07 - Funções
+
+### **📌 Introdução**
+
+Bem-vindo ao **sétimo dia do desafio!** 🎉 Hoje vamos falar sobre **funções**, o coração de qualquer programa bem estruturado.
+
+Uma função é como uma **receita de bolo**: você define os ingredientes (entradas), segue os passos (código dentro da função) e obtém o bolo pronto (resultado).
+
+Elas ajudam a organizar o código, evitar repetições e facilitar a reutilização. Vamos explorar os diferentes tipos de funções no JavaScript, entender como elas funcionam e criar exemplos práticos. 🚀
+
+---
+
+### **📚 O Que é uma Função?**
+
+Uma **função** é um bloco de código que realiza uma tarefa específica. Você pode pensar nela como um **mini-programa** dentro do seu programa principal.
+
+💡 **Exemplo no mundo real:**
+
+- Uma função para calcular a soma de dois números.
+- Uma função para validar um email.
+
+📌 **Exemplo no código:**
+
+```jsx
+function saudacao(nome) {
+  return `Olá, ${nome}!`;
+}
+
+console.log(saudacao("Ana")); // Saída: Olá, Ana!
+```
+
+---
+
+### **🔍 Como Criar Funções no JavaScript**
+
+### **1. Declaração de Função (Function Declaration):**
+
+```jsx
+function somar(a, b) {
+  return a + b;
+}
+
+console.log(somar(2, 3)); // Saída: 5
+```
+
+### **2. Expressão de Função (Function Expression):**
+
+```jsx
+const multiplicar = function (a, b) {
+  return a * b;
+};
+
+console.log(multiplicar(4, 5)); // Saída: 20
+```
+
+### **3. Arrow Function (ES6):**
+
+```jsx
+const dividir = (a, b) => a / b;
+
+console.log(dividir(10, 2)); // Saída: 5
+```
+
+📌 **Dica:** Use arrow functions para simplificar código curto e direto.
+
+---
+
+### **🔄 Parâmetros e Retornos**
+
+**Funções com Parâmetros:**
+Parâmetros são como "ingredientes" que a função precisa para funcionar.
+
+```jsx
+function cumprimentar(nome) {
+  return `Olá, ${nome}!`;
+}
+
+console.log(cumprimentar("João")); // Saída: Olá, João!
+```
+
+**Funções Sem Retorno:**
+Nem todas as funções precisam retornar um valor.
+
+```jsx
+function exibirMensagem(mensagem) {
+  console.log(mensagem);
+}
+
+exibirMensagem("Bem-vindo ao curso!"); // Saída: Bem-vindo ao curso!
+```
+
+**Funções com Valor Padrão:**
+Você pode definir valores padrão para os parâmetros.
+
+```jsx
+function somar(a = 0, b = 0) {
+  return a + b;
+}
+
+console.log(somar(5)); // Saída: 5 (b = 0 por padrão)
+```
+
+---
+
+### **🔄 Funções de Alta Ordem**
+
+Funções de alta ordem são aquelas que recebem outras funções como argumentos ou retornam funções.
+
+💡 **Exemplo:**
+
+```jsx
+function calcular(a, b, operacao) {
+  return operacao(a, b);
+}
+
+const somar = (a, b) => a + b;
+const multiplicar = (a, b) => a * b;
+
+console.log(calcular(5, 3, somar)); // Saída: 8
+console.log(calcular(5, 3, multiplicar)); // Saída: 15
+```
+
+---
+
+### **💻 Exemplos Práticos**
+
+**Calculadora Básica:**
+
+```jsx
+function calcular(a, b, operacao) {
+  switch (operacao) {
+    case "+":
+      return a + b;
+    case "-":
+      return a - b;
+    case "*":
+      return a * b;
+    case "/":
+      return a / b;
+    default:
+      return "Operação inválida";
+  }
+}
+
+console.log(calcular(10, 5, "+")); // Saída: 15
+```
+
+**Verificar Par ou Ímpar:**
+
+```jsx
+function parOuImpar(numero) {
+  return numero % 2 === 0 ? "Par" : "Ímpar";
+}
+
+console.log(parOuImpar(7)); // Saída: Ímpar
+```
+
+**Converter Temperatura:**
+
+```jsx
+function celsiusParaFahrenheit(celsius) {
+  return (celsius * 9) / 5 + 32;
+}
+
+console.log(celsiusParaFahrenheit(25)); // Saída: 77
+```
+
+**Calcular Fatorial:**
+
+```jsx
+function fatorial(n) {
+  if (n === 0) return 1;
+  return n * fatorial(n - 1);
+}
+
+console.log(fatorial(5)); // Saída: 120
+```
+
+**Filtrar Números Positivos em um Array:**
+
+```jsx
+function filtrarPositivos(array) {
+  return array.filter((numero) => numero > 0);
+}
+
+console.log(filtrarPositivos([-3, 5, -1, 8])); // Saída: [5, 8]
+```
+
+---
+
+### **🛠️ Dicas Importantes**
+
+- **Evite Repetição de Código:**
+  Sempre que perceber que está repetindo código, considere criar uma função.
+- **Nomeie Funções de Forma Clara:**
+  O nome da função deve indicar claramente o que ela faz.
+  ```jsx
+  function calcularMedia() {} // Claro
+  function calc() {} // Pouco claro
+  ```
+- **Use Funções para Modularizar o Código:**
+  Divida tarefas complexas em várias funções menores e reutilizáveis.
+
+---
+
+### **🎯 Exercícios Práticos**
+
+1. Crie uma função que calcule o dobro de um número.
+2. Escreva uma função que receba um nome e retorne uma mensagem de boas-vindas.
+3. Crie uma função que receba dois números e retorne o maior deles.
+4. Implemente uma função que calcule a média de três números.
+5. Crie uma função que receba um array de números e retorne a soma deles.
+6. Escreva uma função que receba uma string e retorne o número de caracteres dessa string.
+
+---
+
+### **🚀 Conclusão**
+
+Parabéns por completar o sétimo dia do desafio! 🎉 Agora você entende o que são funções, como criá-las, e como utilizá-las para organizar e reutilizar o código.
+
+Amanhã, vamos aprender sobre **Matrizes**, que são arrays com múltiplas dimensões. Te vejo lá! 👋
