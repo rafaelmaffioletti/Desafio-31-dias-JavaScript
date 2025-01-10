@@ -54,3 +54,10 @@ console.log(somaArray(numeros));
 
 
 // 6. Escreva uma função que receba uma string e retorne o número de caracteres dessa string.
+
+function contarCaracteres(frase) {
+  return frase.length;
+}
+
+let texto = ""
+console.log(contarCaracteres("Eu sou a vingança. Eu sou a noite. Eu sou o Batman!"));
